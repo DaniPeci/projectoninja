@@ -1,0 +1,158 @@
+#cabecera{
+		position: relative;
+		width: 850px;
+		height: 160px;
+		border-bottom: 2px solid grey;
+		background-color: transparent;
+		overflow: visible;
+		text-align: center;
+		z-index: 1;
+		
+	}
+#contenedor{
+		width: 850px;
+		height: 97%;
+		padding-bottom: 25px;
+		padding-top: 0px;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 0px 0px 30px 30px;
+		
+	}
+	body{
+			background-image: url('../imagenes/spacepurple.jpg');
+			background-attachment: fixed;	
+		}
+	
+	#menu{
+		background-color: transparent;
+		float: left;
+		width: 600px;
+		position: relative;
+		top: 0;
+		left: 0;
+		margin-bottom: 70px;
+		}
+		#menu-web,#menu-foro{
+		width: 50px;
+		background-color: #59399E;
+		float: left;
+		padding: 10px 20px;
+		border-radius: 0px 0px 10px 0px;
+		margin-left: 6px;
+		text-align: center;
+		font-size: 11px;
+		position: relative;
+		font-weight: bold;
+		z-index: 3;
+		color: ivory;
+		box-shadow:
+  			0 0 0 1px #CCC,
+ 			0 0 0 2px #888,
+  			0 0 0 3px #444,
+  			0 0 0 4px #000;
+		-moz-box-shadow:
+  			0 0 0 1px #CCC,
+  			0 0 0 2px #888,
+  			0 0 0 3px #444,
+  			0 0 0 4px #000;
+		-webkit-box-shadow:
+  			0 0 0 1px #CCC,
+  			0 0 0 2px #888,
+  			0 0 0 3px #444,
+  			0 0 0 4px #000;
+  			
+		}
+		#menu-web:hover,#menu-foro:hover {
+		cursor: pointer;
+		text-shadow: 2px 2px black;
+		}
+	#foros{
+		width: 600px;
+		float: left;
+		min-height: 750px;
+		overflow: auto;
+		background-image: url('../imagenes/fondo.jpg');
+		padding-bottom: 30px;
+		border-radius: 0px 0px 30px 30px;
+		}
+		
+	.cat-izq,.cat-der{
+		margin-bottom: 10px;
+		background-color: #4212AF;
+		width: 180px;
+		height: 105px;
+		text-align: center;
+		padding: auto;
+		-webkit-box-shadow: 2px 2px black;
+		-o-box-shadow: 2px 2px black;
+		-moz-box-shadow: 2px 2px black;
+		border: 2px solid black;
+		position: relative;
+		z-index: 3;
+		text-align: center;
+		font-variant: small-caps;
+		font-size: large;
+		margin-top: auto;
+		padding-top: auto;
+		color: ivory;
+		border-radius: 10px 3px;
+	}
+	.cat-izq:hover ,.cat-der:hover {
+		-webkit-box-shadow: 2px 2px black inset;
+		-o-box-shadow: 2px 2px black inset;
+		-moz-box-shadow: 2px 2px black inset;
+		cursor: pointer;
+		top: +2px;
+		}
+	
+	.cat-izq{
+		float: left;
+		margin-right: 50px;
+		margin-left: 40px;
+		margin-bottom: 10px;
+		
+	}
+	
+	.cat-der{
+		float: right;
+		margin-right: 40px;
+		margin-left: 50px;
+	}
+	#login{
+			width: 220px;
+			background-image: url('../imagenes/fondo.jpg');
+			height: 120px;
+			overflow: hidden;
+			margin: 5px;
+			padding: 5px;
+			padding-top: 10px;
+			border-radius: 5px;
+			position: relative;
+			z-index: 3;
+			font-variant: small-caps;
+			color: #B79DE1;
+		}
+	#columna-der{
+			min-height: 550px;
+			height: 95%;	
+			float: right;	
+		}
+	#espacio{
+		border-left: 2px solid white;
+		border-top: 2px solid white;
+		background-color: gray;
+		float: right;
+		height: 83%;
+		width: 240px;
+		border-radius: 30px 30px 30px 30px;
+			}
+textarea {
+	resize: none;
+}			
+			
+@font-face {
+font-family: "Starcraft";
+src: url(../CSS/Starcraft.ttf) format("truetype");
+}
+
