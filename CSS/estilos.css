@@ -156,3 +156,7 @@ font-family: "Starcraft";
 src: url(../CSS/Starcraft.ttf) format("truetype");
 }
 
+#listaStreams{
+	list-style: none;
+}
+
