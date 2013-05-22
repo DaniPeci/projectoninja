@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="../JS/jquery-ui-1.10.3/themes/base/jquery-ui.css" />
 		<!--<link rel="stylesheet" type="text/css" href="../CSS/slide/camera.css" />-->
 		<script src="../JS/jquery-1.9.1.min.js"></script>
-		<script src="../JS/jquery-ui-1.10.3/ui/jquery-ui.js"></script>-->
+		<script src="../JS/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
 		<script src="../JS/jquery.js"></script>
 		<!--<script src="../JS/slide/jquery.easing.1.3.js"></script>
 		<script src="../JS/slide/jquery.mobile.customized.min.js"></script>
@@ -24,6 +24,7 @@
 					$("#ventanaRegistro").dialog("open");
 				
 				});
+				
 				
 			});
 		</script>
@@ -52,7 +53,7 @@
 					</div>		
 				</div>
 				
-				
+
 				
 			</div>
 			

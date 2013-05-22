@@ -9,10 +9,10 @@ jQuery(function($){
       
       
     $( "#menu-web" ).click(function(){
-      window.location = '/phps/portada.php';
+      window.location = 'portada.php';
     	});
    $( "#menu-foro" ).click(function(){
-      window.location = '/phps/foro.php';
+      window.location = 'foro.php';
     	});
     	
     	$("#despliegaRellenable").click(function(){
