@@ -65,7 +65,10 @@
 			<div id="espacio">
 				<button>sadasd</button><br />
 				<?php
-						$stream_list = "sc2sage,egstephano"; 
+						/*El $stream_list es un string con los nombres de los canales,
+							las claves del $stream_name son el nombre que aparecerá en la web y en valor será el nombre exacto del stream*/
+						$stream_list="taketv,empiretvkas,mlgsc2, sc2sage, empiretvkas";
+						$stream_name=array("SC2Sage"=>"sc2sage","EGStephano"=>"egstephano","FollowGrubby"=>"followgrubby","Empire Kas"=>"empiretvkas");
 						//Hay que activar curl en php para que funcione
 						$mycurl = curl_init();
 
@@ -79,15 +82,18 @@
 						$web_response =  curl_exec($mycurl); 
 
 						$results = json_decode($web_response); 
-						echo "<ul id='listaStreams'>";
 						$i=0;
 						foreach($results as $s) {
-							echo "<li>".$s->channel->title."<img src='../imagenes/live.gif'></img></li>";
-						
-						$i++;
-						/* echo $s->title . "\n";
-						 echo $s->channel_count . " viewers watching\n";
-						 echo $s->channel->screen_cap_url_large . " is the url for the screen capture\n";*/
+							$informacion[$i]=$s->channel->login;
+							$i++;
+						}
+						echo "<ul id='listaStreams'>";
+						foreach($stream_name as $sn=> $valor){
+							if(array_search(strtolower($valor),$informacion)){
+								echo "<li>".$sn."<img src='../imagenes/live.gif' /></li>";
+							}else{
+								echo "<li>".$sn."<img src='../imagenes/offline.gif' /></li>";
+							}
 						}
 						echo "</ul>";
 
