@@ -5,13 +5,9 @@
 		<link href="../imagenes/starcraft-logo.png" rel="shortcut icon" />
 		<link rel="stylesheet" type="text/css" href="../CSS/estilos.css" />
 		<link rel="stylesheet" href="../JS/jquery-ui-1.10.3/themes/base/jquery-ui.css" />
-		<!--<link rel="stylesheet" type="text/css" href="../CSS/slide/camera.css" />-->
 		<script src="../JS/jquery-1.9.1.min.js"></script>
 		<script src="../JS/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
 		<script src="../JS/jquery.js"></script>
-		<!--<script src="../JS/slide/jquery.easing.1.3.js"></script>
-		<script src="../JS/slide/jquery.mobile.customized.min.js"></script>
-		<script src="../JS/slide/camera.min.js"></script>-->
 		<script>
 			$(function() {
 				$("#ventanaRegistro").dialog({
@@ -32,8 +28,8 @@
 	<body>
 		<?php
 			require_once("config.php");
-			//include_once('funciones.php'); No se utiliza en este archivo
-			session_start();
+		//require_once('funciones.php');
+
 			
 		?>
 		<div id="contenedor">
@@ -52,8 +48,14 @@
 								FORO
 					</div>		
 				</div>
+				<div id="cajaStream">
+					<?php
+						echo $_COOKIE[$_GET['stream']];
+						
+					?>
+					
 				
-		
+				</div>
 			</div>
 			
 			<div id="columna-der">
@@ -98,7 +100,6 @@
 							}
 						}
 						echo "</ul>";
-
 				?>
 			
 			
@@ -113,6 +114,6 @@
 				include_once("registro.php");
 			?>
 		</div>
-	</body>
 	
+	</body>
 </html>
