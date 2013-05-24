@@ -92,7 +92,7 @@
 						foreach($stream_name as $sn=> $valor){
 							if(array_search(strtolower($valor),$informacion)!==false){
 								echo "<a href='verstream.php?stream=".$valor."'><li>".$sn."&nbsp;<img src='../imagenes/live.gif' /></li></a>";
-								setcookie($valor, $embed_code[$valor], time()+3600);
+								$_SESSION["stream:".$valor]=$embed_code[$valor];
 							}else{
 								echo "<li>".$sn."&nbsp;<img src='../imagenes/offline.gif' /></li>";
 							}

@@ -28,6 +28,7 @@
 	<body>
 		<?php
 			require_once("config.php");
+			session_start();
 		//require_once('funciones.php');
 
 			
@@ -50,7 +51,9 @@
 				</div>
 				<div id="cajaStream">
 					<?php
-						echo $_COOKIE[$_GET['stream']];
+						echo $_SESSION["stream:".$_GET['stream']];
+
+						
 						
 					?>
 					
@@ -99,6 +102,7 @@
 								echo "<li>".$sn."&nbsp;<img src='../imagenes/offline.gif' /></li>";
 							}
 						}
+
 						echo "</ul>";
 				?>
 			
