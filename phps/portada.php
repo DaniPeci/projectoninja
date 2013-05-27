@@ -67,8 +67,8 @@
 				<?php
 						/*El $stream_list es un string con los nombres de los canales,
 							las claves del $stream_name son el nombre que aparecerá en la web y en valor será el nombre exacto del stream*/
-						$stream_list="egstephano,followgrubby,empiretvkas,mlgsc2,liquidsnute,rootcatz";
-						$stream_name=array("EGStephano"=>"egstephano","FollowGrubby"=>"followgrubby","Empire Kas"=>"empiretvkas","MLG"=>"mlgsc2","Liquid Snute"=>"liquidsnute","ROOT Catz"=>"rootcatz");
+						$stream_list="egstephano,followgrubby,empiretvkas,mlgsc2,liquidsnute,rootcatz,hellosase";
+						$stream_name=array("EGStephano"=>"egstephano","FollowGrubby"=>"followgrubby","Empire Kas"=>"empiretvkas","MLG"=>"mlgsc2","Liquid Snute"=>"liquidsnute","ROOT Catz"=>"rootcatz","SaSe"=>"hellosase");
 						//Hay que activar curl en php para que funcione
 						$mycurl = curl_init();
 
@@ -90,9 +90,13 @@
 						}
 						echo "<ul id='listaStreams'>";
 						foreach($stream_name as $sn=> $valor){
-							if(array_search(strtolower($valor),$informacion)!==false){
-								echo "<a href='verstream.php?stream=".$valor."'><li>".$sn."&nbsp;<img src='../imagenes/live.gif' /></li></a>";
-								$_SESSION["stream:".$valor]=$embed_code[$valor];
+							if(isset($informacion)){
+								if(array_search(strtolower($valor),$informacion)!==false){
+									echo "<a href='verstream.php?stream=".$valor."'><li>".$sn."&nbsp;<img src='../imagenes/live.gif' /></li></a>";
+									$_SESSION["stream:".$valor]=$embed_code[$valor];
+								}else{
+									echo "<li>".$sn."&nbsp;<img src='../imagenes/offline.gif' /></li>";
+								}
 							}else{
 								echo "<li>".$sn."&nbsp;<img src='../imagenes/offline.gif' /></li>";
 							}
