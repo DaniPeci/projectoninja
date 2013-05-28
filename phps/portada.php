@@ -83,11 +83,12 @@
 
 						$results = json_decode($web_response); 
 						$i=0;
-						foreach($results as $s) {
-							$informacion[$i]=$s->channel->login;
-							$embed_code[$informacion[$i]]=$s->channel->embed_code;
-							$i++;
-						}
+						
+							foreach($results as $s) {
+								$informacion[$i]=$s->channel->login;
+								$embed_code[$informacion[$i]]=$s->channel->embed_code;
+								$i++;
+							}
 						echo "<ul id='listaStreams'>";
 						foreach($stream_name as $sn=> $valor){
 							if(isset($informacion)){
