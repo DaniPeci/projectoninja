@@ -97,7 +97,7 @@
 						foreach($stream_name as $sn=> $valor){
 							if(isset($informacion)){
 								if(array_search(strtolower($valor),$informacion)!==false){
-									echo "<a href='verstream.php?stream=".$valor."'><li>".$sn."&nbsp;<img src='../imagenes/live.gif' /></li></a>";
+									echo "<a href='verstream.php?stream=".$valor."'><li>".$sn."&nbsp;<img width: 50px; src='../imagenes/live.gif' /></li></a>";
 									$_SESSION["stream:".$valor]=$embed_code[$valor];
 								}else{
 									echo "<li>".$sn."&nbsp;<img src='../imagenes/offline.gif' /></li>";
