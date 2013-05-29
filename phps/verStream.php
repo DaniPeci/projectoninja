@@ -20,6 +20,10 @@
 					$("#ventanaRegistro").dialog("open");
 				
 				});
+				$("#cajaStream object").prop({
+					"width":"100%",
+					"height":"500"
+				});
 				
 				
 			});
