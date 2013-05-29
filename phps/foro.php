@@ -47,6 +47,9 @@
 			</div>
 			<div id="espacio">
 			<button>sadasd</button>
+				<?php
+						include_once "listaStream.php";
+				?>
 			</div>
 		
 		</div>

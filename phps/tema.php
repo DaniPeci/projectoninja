@@ -112,7 +112,10 @@
 			?>	
 			</div>
 			<div id="espacio">
-			
+				<?php
+					include_once "listaStream.php";
+				?>
+
 			</div>
 		
 		</div>
