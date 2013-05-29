@@ -22,18 +22,20 @@
 							$embed_code[$informacion[$i]]=$s->channel->embed_code;
 							$i++;
 						}
-						echo "<ul id='listaStreams'>";
+						echo "<table id='listaStreams'>";
 						foreach($stream_name as $sn=> $valor){
+							echo "<tr>";
 							if(isset($informacion)){
 								if(array_search(strtolower($valor),$informacion)!==false){
-									echo "<a href='verstream.php?stream=".$valor."'><li>".$sn."&nbsp;<img style = 'width: 50px !important;' src='../imagenes/live.gif' /></li></a>";
+									echo "<td><a href='verstream.php?stream=".$valor."'>".$sn."</a></td><td><img style = 'width: 50px !important;' src='../imagenes/live.gif' /></td>";
 									$_SESSION["stream:".$valor]=$embed_code[$valor];
 								}else{
-									echo "<li>".$sn."&nbsp;<img src='../imagenes/offline.gif' /></li>";
+									echo "<td>".$sn."</td><td><img src='../imagenes/offline.gif' /></td>";
 								}
 							}else{
-								echo "<li>".$sn."&nbsp;<img src='../imagenes/offline.gif' /></li>";
+								echo "<td>".$sn."</td><td><img src='../imagenes/offline.gif' /></td>";
 							}
+							echo "</tr>";
 						}
-						echo "</ul>";
+						echo "</table>";
 		?>
