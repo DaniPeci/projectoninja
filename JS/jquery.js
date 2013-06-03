@@ -1,11 +1,5 @@
 jQuery(function($){
-    $( "button:first" ).button({
-      icons: {
-        primary: "ui-icon-gear",
-        secondary: "ui-icon-triangle-1-s"
-      },
-      text: false
-    });
+   
       
       
     $( "#menu-web" ).click(function(){

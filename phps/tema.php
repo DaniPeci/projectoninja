@@ -39,7 +39,8 @@
 					$cerrado;
 					$nombre_tema;
 					//Obtenemos el nombre del tema
-					$consulta=mysql_query("SELECT nombre,usuario,texto,f_creacion,cerrado from tema where idTema=".$tema);
+					$consulta=mysql_query("SELECT nombre,usuario,texto,f_creacion,cerrado from tema where idTema=".$tema) or
+					die("Error al obtener tema".mysql_error());
 					while($fila=mysql_fetch_array($consulta))
 					{
 						$nombre_tema=$fila[0];
