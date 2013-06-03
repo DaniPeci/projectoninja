@@ -92,7 +92,6 @@
 					<div class="contenedor_respuesta">
 								<!-- Comprobacion de hilo cerrado -->
 								<?php
-									echo $cerrado;
 									if($cerrado==0)
 									{
 										?><img src="../imagenes/responder.png" alt="Nueva respuesta" id="despliegaRellenable" /><?php
