@@ -1,8 +1,8 @@
 	<?php
 						/*El $stream_list es un string con los nombres de los canales,
 						las claves del $stream_name son el nombre que aparecerá en la web y en valor será el nombre exacto del stream*/
-						$stream_list="egstephano,followgrubby,empiretvkas,mlgsc2,liquidsnute,rootcatz,hellosase";
-						$stream_name=array("EGStephano"=>"egstephano","FollowGrubby"=>"followgrubby","Empire Kas"=>"empiretvkas","MLG"=>"mlgsc2","Liquid Snute"=>"liquidsnute","ROOT Catz"=>"rootcatz","SaSe"=>"hellosase");
+						$stream_list="egstephano,followgrubby,empiretvkas,mlgsc2,liquidsnute,rootcatz,hellosase,dragon";
+						$stream_name=array("EGStephano"=>"egstephano","FollowGrubby"=>"followgrubby","Empire Kas"=>"empiretvkas","MLG"=>"mlgsc2","Liquid Snute"=>"liquidsnute","ROOT Catz"=>"rootcatz","SaSe"=>"hellosase","Dragon"=>"dragon");
 						//Hay que activar curl en php para que funcione
 						$mycurl = curl_init();
 

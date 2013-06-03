@@ -66,21 +66,20 @@
 			</div>
 			
 			<div id="columna-der">
-			<div id="login">
-			<?php
-			include_once('login.php');
-			?>	
-			</div>
-			<div id="espacio">
-				<button>sadasd</button><br />
+				<div id="login">
 				<?php
-						include_once "listaStream.php";
-						include_once "twitter.php";
-				?>
+				include_once('login.php');
+				?>	
+				</div>
+				<div id="espacio">
+					<?php
+							include_once "listaStream.php";
+							include_once "twitter.php";
+					?>
 
+				</div>
+			
 			</div>
-		
-		</div>
 		</div>
 		<div id="ventanaRegistro" title="Registro">
 			<?php
