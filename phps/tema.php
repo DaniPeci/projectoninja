@@ -36,16 +36,17 @@
 					$tema=$_GET['tema'];
 					
 					
-					
+					$cerrado;
 					$nombre_tema;
 					//Obtenemos el nombre del tema
-					$consulta=mysql_query("SELECT nombre,usuario,texto,f_creacion from tema where idTema=".$tema);
+					$consulta=mysql_query("SELECT nombre,usuario,texto,f_creacion,cerrado from tema where idTema=".$tema);
 					while($fila=mysql_fetch_array($consulta))
 					{
 						$nombre_tema=$fila[0];
 						$id_creador=$fila[1];
 						$texto=$fila[2];
 						$fecha=$fila[3];
+						$cerrado=$fila[4];
 						$nombre_creador;
 						$consulta2=mysql_query("SELECT nickname from usuario where id=".$id_creador);
 						while($fila2=mysql_fetch_array($consulta2))
@@ -88,14 +89,26 @@
 					?>
 					
 					<div class="contenedor_respuesta">
-						<img src="../imagenes/responder.png" alt="Nueva respuesta" id="despliegaRellenable" />
+								<!-- Comprobacion de hilo cerrado -->
+								<?php
+									echo $cerrado;
+									if($cerrado==0)
+									{
+										?><img src="../imagenes/responder.png" alt="Nueva respuesta" id="despliegaRellenable" /><?php
+									}else
+									{
+										?><img src="../imagenes/responder.png" alt="Hilo cerrado" onclick="alert('El hilo está cerrado');"/></input><?php	
+									}
+								?>
 						<div class="contenido_respuesta"><br />
 							<table class="tabla_nueva">
 							<form method="post" action="nuevaRespuesta.php">
 							<input type="hidden" value="<?php echo $_SESSION['idUsuario']?>" name="idUsuario" />
 							<input type="hidden" value="<?php echo $_REQUEST['tema'] ?>" name="idTema" />
 								<tr><td>Contenido</td><td><textarea id="contenido" rows="12" cols="45" name="contenido"></textarea></td></tr>
-								<tr><td></td><td><input type="image" src="../imagenes/send.jpg" value="enviar" id="enviarRespuesta" disabled="disabled" ><input type="submit" src="../imagenes/send.jpg" value="Enviar"  style="display:none;" /></input></td></tr>
+								<tr><td></td><td>
+									<input type="image" src="../imagenes/send.jpg" value="enviar" id="enviarRespuesta" disabled="disabled" ><input type="submit" src="../imagenes/send.jpg" value="Enviar"  style="display:none;" /></input>
+								</td></tr>
 							</form>
 							</table>
 						</div>
