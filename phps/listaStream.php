@@ -22,6 +22,7 @@
 							$embed_code[$informacion[$i]]=$s->channel->embed_code;
 							$i++;
 						}
+						echo "<h3>LiveStreams</h3>";
 						echo "<table id='listaStreams'>";
 						foreach($stream_name as $sn=> $valor){
 							echo "<tr>";
