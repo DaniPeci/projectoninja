@@ -87,8 +87,7 @@
 		-webkit-box-shadow: 2px 2px black;
 		-o-box-shadow: 2px 2px black;
 		-moz-box-shadow: 2px 2px black;
-		border: 3px solid transparent;
-		-webkit-border-image: url('../imagenes/borde.jpg') 2 2 2 2 stretch;
+		border: 2px solid black;
 		position: relative;
 		z-index: 3;
 		text-align: center;
