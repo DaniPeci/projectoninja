@@ -4,14 +4,12 @@
 		<title>Foro Starcraft II</title>
 		<link href="../imagenes/starcraft-logo.png" rel="shortcut icon" />
 		<link rel="stylesheet" type="text/css" href="../CSS/estilos.css" />
+		<link rel="stylesheet" type="text/css" href="../CSS/screen.css" />
 		<link rel="stylesheet" href="../JS/jquery-ui-1.10.3/themes/base/jquery-ui.css" />
-		<!--<link rel="stylesheet" type="text/css" href="../CSS/slide/camera.css" />-->
 		<script src="../JS/jquery-1.9.1.min.js"></script>
 		<script src="../JS/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
 		<script src="../JS/jquery.js"></script>
-		<!--<script src="../JS/slide/jquery.easing.1.3.js"></script>
-		<script src="../JS/slide/jquery.mobile.customized.min.js"></script>
-		<script src="../JS/slide/camera.min.js"></script>-->
+		<script type="text/javascript" src="../JS/easySlider1.7.js"></script>
 		<script>
 			$(function() {
 				$("#ventanaRegistro").dialog({
@@ -24,7 +22,12 @@
 					$("#ventanaRegistro").dialog("open");
 				
 				});
-				
+
+				$("#slider").easySlider({
+					auto: true, 
+					continuous: true,
+					pause: 4000
+				});
 				
 			});
 		</script>
@@ -52,8 +55,19 @@
 								FORO
 					</div>		
 				</div>
-				
-		
+			<!--Espacio Principal-->	
+				<div id="content">
+					<div id="slider">
+						<ul>				
+							<li><a href="http://eu.battle.net/sc2/es/blog/10054894/Comienzan_los_dieciseisavos_de_WCS_Europa-14_05_2013"  target="_blank"><img src="../imagenes/slider/campeonato.jpg" alt="Campeonato Mundial" /></a></li>
+							<li><a href="http://eu.battle.net/sc2/es/blog/10100892/Requisito_de_Liga_de_maestros_para_la_WCS-31_05_2013"  target="_blank"><img src="../imagenes/slider/maestros.jpg" alt="Requisitos liga maestros SC2" /></a></li>
+							<li><a href="http://eu.battle.net/sc2/es/blog/10054754/Novedad_en_Arcade_Clownzs_Gladiator_Arena-27_05_2013"  target="_blank"><img src="../imagenes/slider/clownzArena.jpg" alt="Clownz Gladiator Arena" /></a></li>		
+						</ul>
+					</div>
+				</div>
+
+			
+
 			</div>
 			
 			<div id="columna-der">
