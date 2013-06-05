@@ -80,6 +80,7 @@
 	.cat-izq,.cat-der{
 		margin-bottom: 10px;
 		background-image: url('../imagenes/fondoMorado2.jpg');
+		background-repeat: no-repeat;
 		width: 180px;
 		height: 105px;
 		text-align: center;
@@ -119,6 +120,19 @@
 		margin-right: 40px;
 		margin-left: 50px;
 	}
+
+	.derechaFondo{
+		position: absolute;
+		background-color: #3E1B5F;
+		height: 105px;
+		width: 11px;
+		top: 0;
+		left: 168;
+		border: 1px solid black;
+		border-top: none;
+		border-bottom-right-radius: 10px;
+	}
+
 	#login{
 			width: 220px;
 			background-image: url('../imagenes/fondo.jpg');

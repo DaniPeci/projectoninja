@@ -7,7 +7,43 @@
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 		<script src="../JS/jquery.js"></script>
-		<script src="../JS/javascript.js">
+		<script>
+			$(function(){
+				//Cambio color izquierda
+				$(".cat-izq").hover(
+					function(){
+						$(this).children(".derechaFondo").css({
+							"background-color": "#81329D",
+							"border-top":"2px solid black",
+							"height": "103px"
+						})},
+					function(){
+					$(this).children(".derechaFondo").css({
+							"background-color": "#3E1B5F",
+							"border-top" : "none",
+							"height" : "105px"
+						})}
+
+				);
+
+				//Cambio color derecha
+				$(".cat-der").hover(
+					function(){
+						$(this).children(".derechaFondo").css({
+							"background-color": "#81329D",
+							"border-top":"2px solid black",
+							"height": "103px"
+						})},
+					function(){
+					$(this).children(".derechaFondo").css({
+							"background-color": "#3E1B5F",
+							"border-top" : "none",
+							"height" : "105px"
+						})}
+				);
+				
+
+			});
 		</script>	
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
 	</head>

@@ -11,6 +11,7 @@
 		echo "<a href='categoria.php?id=".$resultado['idCategoria']."'>";
 		echo "<div class='cat-izq' id='categoria".$resultado['idCategoria']."'data-id='".$resultado["idCategoria"]."'>".$resultado["nombre"];
 			echo '<br/><img src="../imagenes/'.$resultado['nombre'].'.png"/>';
+			echo "<div class='derechaFondo'></div>";
 		echo "</div>";
 		echo "</a>";
 		}
@@ -18,6 +19,7 @@
 		echo "<a href='categoria.php?id=".$resultado['idCategoria']."'>";
 		echo "<div class='cat-der' id='categoria".$resultado['idCategoria']."'data-id='".$resultado["idCategoria"]."'>".$resultado["nombre"];
 		echo '<br/><img src="../imagenes/'.$resultado['nombre'].'.png"/>';
+			echo "<div class='derechaFondo'></div>";
 		echo "</div>";
 		echo "</a>";
 			}

@@ -28,7 +28,8 @@
 					continuous: true,
 					pause: 4000
 				});
-				
+
+
 			});
 		</script>
 	</head>
