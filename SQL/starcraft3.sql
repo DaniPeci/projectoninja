@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 28-05-2013 a las 12:22:59
+-- Tiempo de generación: 05-06-2013 a las 15:43:32
 -- Versión del servidor: 5.5.16
 -- Versión de PHP: 5.3.8
 
@@ -94,14 +94,14 @@ CREATE TABLE IF NOT EXISTS `noticias` (
 
 CREATE TABLE IF NOT EXISTS `respuesta` (
   `idRespuesta` int(11) NOT NULL AUTO_INCREMENT,
-  `texto` longtext COLLATE utf8mb4_spanish_ci NOT NULL,
+  `texto` longtext COLLATE utf8_spanish_ci NOT NULL,
   `idUsuario` int(11) NOT NULL,
   `idTema` int(11) NOT NULL,
   `f_creacion` datetime NOT NULL,
   PRIMARY KEY (`idRespuesta`),
   KEY `idUsuario` (`idUsuario`,`idTema`),
   KEY `idTema` (`idTema`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci AUTO_INCREMENT=22 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=22 ;
 
 --
 -- Volcado de datos para la tabla `respuesta`
