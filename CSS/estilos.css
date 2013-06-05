@@ -51,11 +51,6 @@
  			0 0 0 2px #888,
   			0 0 0 3px #444,
   			0 0 0 4px #000;
-		-moz-box-shadow:
-  			0 0 0 1px #CCC,
-  			0 0 0 2px #888,
-  			0 0 0 3px #444,
-  			0 0 0 4px #000;
 		-webkit-box-shadow:
   			0 0 0 1px #CCC,
   			0 0 0 2px #888,
@@ -86,7 +81,7 @@
 		padding: auto;
 		-webkit-box-shadow: 2px 2px black;
 		-o-box-shadow: 2px 2px black;
-		-moz-box-shadow: 2px 2px black;
+		box-shadow: 2px 2px black;
 		border: 2px solid black;
 		position: relative;
 		z-index: 3;
@@ -101,7 +96,7 @@
 	.cat-izq:hover ,.cat-der:hover {
 		-webkit-box-shadow: 2px 2px black inset;
 		-o-box-shadow: 2px 2px black inset;
-		-moz-box-shadow: 2px 2px black inset;
+		box-shadow: 2px 2px black inset;
 		cursor: pointer;
 		top: +2px;
 		}
