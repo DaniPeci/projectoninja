@@ -78,7 +78,7 @@
 			<div id="columna-der">
 			<div id="login">
 			<?php
-			include_once('/login.php');
+			include_once('login.php');
 			?>	
 			</div>
 			<div id="espacio">
