@@ -15,7 +15,8 @@
 		
 	#content{
 		position:relative;
-		width:600px;
+		float: left;
+
 		}	
 		
 
@@ -43,7 +44,7 @@
 		height:48px;
 		position:absolute;
 		left:10px;
-		top:220px;
+		top: 40%;
 		z-index:1000;
 		}	
 	#nextBtn, #slider1next{ 

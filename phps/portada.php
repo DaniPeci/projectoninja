@@ -19,7 +19,9 @@
 					 modal: true
 				});
 				$("#botonRegistro").click(function(){
+					$("#ventanaRegistro").dialog('option', "z-index", 1002);
 					$("#ventanaRegistro").dialog("open");
+
 				
 				});
 
@@ -72,21 +74,21 @@
 			</div>
 			
 			<div id="columna-der">
-			<div id="login">
-			<?php
-			include_once('login.php');
-			?>	
-			</div>
-			<div id="espacio">
-					<?php
-						include_once "listaStream.php";
-						include_once "twitter.php";
-					?>
+				<div id="login">
+				<?php
+				include_once('login.php');
+				?>	
+				</div>
+				<div id="espacio">
+						<?php
+							include_once "listaStream.php";
+							include_once "twitter.php";
+						?>
 
 
-			</div>
+				</div>
 		
-		</div>
+			</div>
 		</div>
 		<div id="ventanaRegistro" title="Registro">
 			<?php

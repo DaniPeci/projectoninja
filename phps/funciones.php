@@ -35,7 +35,7 @@
 		
 		$tiempo=time();
 		$tiempoTranscurrido=$tiempo-$_SESSION['tiempo'];
-			if($tiempoTranscurrido>=600){
+			if($tiempoTranscurrido>=900){
 				destruirSesion();
 			}else{$_SESSION['tiempo']=time();}
 		}
