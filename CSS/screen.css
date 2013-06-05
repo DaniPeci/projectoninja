@@ -56,17 +56,21 @@
 		position:relative;
 		width:67px;
 		height:48px;
-		background:url('../imagenes/slide_arrows.png') no-repeat left top;	
+		background:url('../imagenes/slide_arrows.png') no-repeat left top;
+		opacity: .4;
 		}	
 	#nextBtn a, #slider1next a{ 
 		background:url('../imagenes/slide_arrows.png') no-repeat right top;	
+		opacity: .4;
 		}	
 
 	#prevBtn a:hover{
 		background:url('../imagenes/slide_arrows.png') no-repeat left bottom;	
+		opacity: 1;
 	}
 	#nextBtn a:hover{
 		background:url('../imagenes/slide_arrows.png') no-repeat right bottom;
+		opacity: 1;
 	}
 
 	
