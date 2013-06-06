@@ -74,5 +74,5 @@ jQuery(function($){
 		  url: "../phps/funciones.php",
 		  data: "eliminarImagen="+usuario
 		});
-		window.location = location.href
+		location.reload();
     }
