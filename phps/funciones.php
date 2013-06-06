@@ -51,7 +51,7 @@
      function upload_image($destination_dir,$name_media_field,$file_name){
         $tmp_name = $_FILES[$name_media_field]['tmp_name'];
         //si hemos enviado un directorio que existe realmente y hemos subido el archivo    
-        if ( is_dir($destination_dir) && is_uploaded_file($tmp_name) &&  $_FILES[$name_media_field]['size']<1000000) 
+        if ( is_dir($destination_dir) && is_uploaded_file($tmp_name) &&  $_FILES[$name_media_field]['size']<=200000) 
         {        
             $img_file  = $_FILES[$name_media_field]['name'] ;                      
             $img_type  = $_FILES[$name_media_field]['type'];   
@@ -73,7 +73,7 @@
                     return true;
                 }
             }
-        }else{echo "<script>alert('No puede subirse una imagen tan grande')</script>";}
+        }else{echo "<script>alert('Imagen no válida (Max 200 Kb)')</script>";}
         //si llegamos hasta aquí es que algo ha fallado
         return false; 
     }//end function

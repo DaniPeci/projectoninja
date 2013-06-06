@@ -20,9 +20,7 @@
 				});
 				$("#botonRegistro").click(function(){
 					$("#ventanaRegistro").dialog('option', "z-index", 1002);
-					$("#ventanaRegistro").dialog("open");
-
-				
+					$("#ventanaRegistro").dialog("open");		
 				});
 
 				$("#slider").easySlider({
@@ -30,7 +28,6 @@
 					continuous: true,
 					pause: 4000
 				});
-
 
 			});
 		</script>
@@ -65,6 +62,7 @@
 							<li><a href="http://eu.battle.net/sc2/es/blog/10054894/Comienzan_los_dieciseisavos_de_WCS_Europa-14_05_2013"  target="_blank"><img src="../imagenes/slider/campeonato.jpg" alt="Campeonato Mundial" /></a></li>
 							<li><a href="http://eu.battle.net/sc2/es/blog/10100892/Requisito_de_Liga_de_maestros_para_la_WCS-31_05_2013"  target="_blank"><img src="../imagenes/slider/maestros.jpg" alt="Requisitos liga maestros SC2" /></a></li>
 							<li><a href="http://eu.battle.net/sc2/es/blog/10054754/Novedad_en_Arcade_Clownzs_Gladiator_Arena-27_05_2013"  target="_blank"><img src="../imagenes/slider/clownzArena.jpg" alt="Clownz Gladiator Arena" /></a></li>		
+							<li><a href="http://us.battle.net/sc2/es/blog/10145837/Mapas_nuevos_para_la_escala_de_la_4%C2%AA_temporada_del_2013-5_6_2013"  target="_blank"><img src="../imagenes/slider/nuevosMapas.jpg" alt="Mapas nuevos para la escala de la 4ª temporada del 2013" /></a></li>
 						</ul>
 					</div>
 				</div>
