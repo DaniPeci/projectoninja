@@ -66,3 +66,13 @@ jQuery(function($){
 		});//fin del ready
 		
 		 });
+
+
+    function eliminarImgPerfil(usuario){
+    	$.ajax({
+		  type: "POST",
+		  url: "../phps/funciones.php",
+		  data: "eliminarImagen="+usuario
+		});
+		window.location = location.href
+    }

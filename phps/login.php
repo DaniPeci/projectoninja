@@ -50,12 +50,14 @@
 			if ($pos === false) {
 				?>
 				<input type="image" src="../imagenes/logout.png" height="40px" width="40px" value="login" class="botones" onclick="location.href='logout.php'"/> 
+				<a href='perfil.php'>Perfil</a>
 				<?php
 				
 			} else {
 			
 				?>
 				<input type="image" src="../imagenes/logout.png" height="40px" width="40px" value="login" class="botones" onclick="location.href='logout.php'"/>
+				<a href='perfil.php'>Perfil</a>
 				<?php
 			}
 			
@@ -78,12 +80,14 @@
 			if ($pos === false) {
 				?>
 				<input type="image"  src="../imagenes/logout.png" height="40px" width="40px" value="login" class="botones" onclick="location.href='logout.php'"/>
+				<a href='perfil.php'>Perfil</a>
 				<?php
 				
 			} else {
 
 				?>
 				<input type="image"  src="../imagenes/logout.png" height="40px" width="40px" value="login" class="botones" onclick="location.href='logout.php'"/>
+				<a href='perfil.php'>Perfil</a>
 				<?php
 			}
 			
