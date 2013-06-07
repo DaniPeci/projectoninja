@@ -18,7 +18,26 @@
 		float: left;
 
 		}	
-		
+	/*Estilos caja texto y fondo texto Slider*/
+	.fondo_slider{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		opacity: .3;
+		background-color: black;
+		height: 25px;
+	}
+	.slider_texto{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		color: white;
+		font-weight: bold;
+		text-align: center;
+	}
+	/*Estilos caja texto y fondo texto Slider*/
 
 /* Slider */
 
@@ -36,6 +55,7 @@
 		width:600px;
 		height:241px;
 		overflow:hidden; 
+		position: relative;
 		}	
 	#prevBtn, #nextBtn,
 	#slider1next, #slider1prev{ 

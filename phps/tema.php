@@ -1,6 +1,6 @@
 <html lang="es">
 	<head>
-		<meta charset="ISO-8859-1" />
+		<meta charset="UTF-8" />
 		<title>Foro Starcraft II</title>
 		<link href="../imagenes/starcraft-logo.png" rel="shortcut icon" />
 		<link rel="stylesheet" type="text/css" href="../CSS/estilosCategoria.css" />

@@ -4,6 +4,7 @@
 		<!--<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 		<script src="../JS/jquery.js"></script>-->
+
 	</head>
 <?php
 
@@ -42,7 +43,7 @@
 			$_SESSION['rol']=$fila[3];
 			$_SESSION['tiempo']=time();
 			$url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-			echo "Estás logueado como <strong>".$_SESSION['usuario']."</strong><br />";
+			echo "EstÃ¡s logueado como <strong>".$_SESSION['usuario']."</strong><br />";
 			echo "Tipo de usuario: <strong>".$_SESSION['rol']."</strong><br />";
 			$cadena = $_SERVER['REQUEST_URI'];
 			$letra   = '?';
@@ -63,7 +64,7 @@
 			
 			
 			}else{
-				echo "Combinación de usuario y contraseña incorrectos";
+				echo "CombinaciÃ³n de usuario y contraseÃ±a incorrectos";
 				unset($_SESSION);
 			}
 		
@@ -71,7 +72,7 @@
 		
 	}else if($usuarioCorrecto){
 			$url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-			echo "Estás logueado como <strong>".$_SESSION['usuario']."</strong><br />";
+			echo "EstÃ¡s logueado como <strong>".$_SESSION['usuario']."</strong><br />";
 			echo "Tipo de usuario: <strong>".$_SESSION['rol']."</strong><br />";
 			$cadena = $_SERVER['REQUEST_URI'];
 			$letra   = '?';
