@@ -97,7 +97,7 @@
 										?><img src="../imagenes/responder.png" alt="Nueva respuesta" id="despliegaRellenable" /><?php
 									}else
 									{
-										?><img src="../imagenes/cerrado.png" alt="Hilo cerrado" onclick="alert('El hilo está cerrado');"/></input><?php	
+										?><img src="../imagenes/responder.png" alt="Hilo cerrado" onclick="alert('El hilo está cerrado');"/></input><?php	
 									}
 								?>
 						<div class="contenido_respuesta"><br />
