@@ -161,9 +161,6 @@
 			border-radius: 30px 30px 30px 30px;
 			position: absolute;
 		}
-		#espacio h3{
-				text-align: center;
-			}
 textarea {
 	resize: none;
 }			
@@ -178,6 +175,5 @@ src: url('../CSS/Starcraft.ttf') format("truetype");
 	font-variant: inherit;
 	font-family: "Starcraft";
 src: url('../CSS/Starcraft.ttf') format("truetype");
-
 }
 

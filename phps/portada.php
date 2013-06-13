@@ -57,7 +57,7 @@
 				</div>
 			<!--Espacio Principal-->	
 				<div id="content">
-					<div id="slider">
+					<center><div id="slider">
 						<ul>				
 							<li>
 								<a href="http://eu.battle.net/sc2/es/blog/10054894/Comienzan_los_dieciseisavos_de_WCS_Europa-14_05_2013"  target="_blank"><img src="../imagenes/slider/campeonato.jpg" alt="Comienzan los dieciseisavos de WCS Europa" />
@@ -94,6 +94,7 @@
 							</li>
 						</ul>
 					</div>
+					</center>
 				</div>
 
 			</div>
