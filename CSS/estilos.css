@@ -1,6 +1,7 @@
 #cabecera{
 		position: relative;
-		width: 850px;
+		min-width: 850px;
+		width: 98%;
 		height: 160px;
 		border-bottom: 2px solid grey;
 		background-color: transparent;
@@ -151,18 +152,18 @@
 			width:25%;	
 		}
 	#espacio {
-			border-left: 2px solid white;
-			border-top: 2px solid white;
-			background-color: gray;
+			border: 2px solid white;
 			float: right;
-			height: 83%;
-			width: 233px;
+			height: 642px;
+			width: 237px;
 			margin-left: 5px;
 			border-radius: 30px 30px 30px 30px;
 			position: absolute;
+			background-color:rgba(173, 0, 255, 0.22);
 		}
 		#espacio h3{
 				text-align: center;
+				color: rgba(255, 255, 255, 0.9);
 			}
 textarea {
 	resize: none;
@@ -178,6 +179,21 @@ src: url('../CSS/Starcraft.ttf') format("truetype");
 	font-variant: inherit;
 	font-family: "Starcraft";
 src: url('../CSS/Starcraft.ttf') format("truetype");
-
+ 	
 }
-
+#listaStreams td:first-child{
+	position: relative;
+  color: rgba(255, 255, 255, 0.9);	
+  background: linear-gradient( 150deg, rgba(173, 0, 255, 0.22),rgba(0, 255, 41, 0.69)100% ,0.1);
+	}
+#listaStreams td:first-child{
+	position: relative;
+  color: rgb(42, 0, 95);	
+  background: linear-gradient( 150deg, rgba(173, 0, 255, 0.22),rgba(0, 255, 41, 0.69)100% ,0.1);
+	}
+#listaStreams a{
+  color: rgba(0, 255, 41,0.70);
+	}
+#listaStreams a:visited{
+  color: rgba(0, 255, 41,0.70);
+	}
