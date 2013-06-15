@@ -49,8 +49,7 @@
 					if(!empty($_POST)){
      					upload_image('../imgPerfil','uploadImage',$_SESSION['usuario']);
 					}
-
-					$consulta="SELECT E.nickname, D.nombre, D.correo, D.direccion, D.cod_postal, D.sexo, D.f_alta, D.f_nacimiento,E.rol FROM usuario E, datos_usuario D WHERE E.id=D.idUsuario=(SELECT idUsuario from usuario where nickname='".$_SESSION['usuario']."');";
+					$consulta="SELECT E.nickname, D.nombre, D.correo, D.direccion, D.cod_postal, D.sexo, D.f_alta, D.f_nacimiento,E.rol FROM usuario E, datos_usuario D WHERE E.id=(SELECT id from usuario where nickname='".$_SESSION['usuario']."') AND D.idUsuario=(SELECT id from usuario where nickname='".$_SESSION['usuario']."');";
 					$resultado=mysql_query($consulta) or
 					die("No se puede obtener tu información personal en este momento");
 
