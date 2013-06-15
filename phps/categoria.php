@@ -36,6 +36,7 @@
 					$categoria=$_GET['id'];
 					/*RECOGIDA DEL TITULAR DE LA CATEGORIA*/
 					$consulta=mysql_query("SELECT nombre from categoria where idCategoria=".$categoria);
+					echo "<div>";
 					while($fila=mysql_fetch_array($consulta))
 					{
 						echo "<h1 align='center' style='color: white;'>".$fila[0]."</h1>"; //Editar el estilo
@@ -50,7 +51,7 @@
 					include_once('paginacionCategorias.php');
 					
 					
-					?></table><br/>
+					?></table><br/></div>
 					<?php
 						if(!isset($_REQUEST['usuario'])){
 											
