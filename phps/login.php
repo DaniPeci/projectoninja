@@ -9,12 +9,9 @@
 <?php
 
 	require_once("config.php");
-		$baneado=false;
-		$datos=obtenerDatosUsuario();
-		$fila=mysql_fetch_array($datos);
-		if($fila[3]=="Bloqueado"){
-			$baneado=true;
-		}
+
+		
+
 		if(!isset($_REQUEST['logout'])){
 			$_REQUEST['logout']=false;
 		}
@@ -37,42 +34,55 @@
 		if(!empty($_POST['user']) && !empty($_POST['passwd'])){
 		$datos=obtenerDatosUsuario();
 		$usuarioCorrecto=validarDatos($datos);
+	
 		
 		
 			
-		if($usuarioCorrecto && !$baneado){
-			$_SESSION['usuario']=$fila[2];
-			$_SESSION['idUsuario']=$fila[0];
-			$_SESSION['rol']=$fila[3];
-			$_SESSION['tiempo']=time();
-			$url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-			echo "Estás logueado como <strong>".$_SESSION['usuario']."</strong><br />";
-			echo "Tipo de usuario: <strong>".$_SESSION['rol']."</strong><br />";
-			$cadena = $_SERVER['REQUEST_URI'];
-			$letra   = '?';
-			$pos = strpos($cadena, $letra);
-			if ($pos === false) {
-				?>
-				<input type="image" src="../imagenes/logout.png" height="40px" width="40px" value="login" class="botones" onclick="location.href='logout.php'"/> 
-				<a href='perfil.php'>Perfil</a>
-				<?php
-				
-			} else {
+		if($usuarioCorrecto){
+			$baneado=false;
+			$datos=obtenerDatosUsuario();
+			$fila=mysql_fetch_array($datos);
+			if($fila[3]=="Bloqueado"){
+				$baneado=true;
 			
-				?>
-				<input type="image" src="../imagenes/logout.png" height="40px" width="40px" value="login" class="botones" onclick="location.href='logout.php'"/>
-				<a href='perfil.php'>Perfil</a>
-				<?php
 			}
 			
+			if(!$baneado){
+				
+					$datos=obtenerDatosUsuario();
+					$fila=mysql_fetch_array($datos);
+					$_SESSION['usuario']=$fila[2];
+					$_SESSION['idUsuario']=$fila[0];
+					$_SESSION['rol']=$fila[3];
+					$_SESSION['tiempo']=time();
+					$url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+					echo "Estás logueado como <strong>".$_SESSION['usuario']."</strong><br />";
+					echo "Tipo de usuario: <strong>".$_SESSION['rol']."</strong><br />";
+					$cadena = $_SERVER['REQUEST_URI'];
+					$letra   = '?';
+					$pos = strpos($cadena, $letra);
+					if ($pos === false) {
+						?>
+						<input type="image" src="../imagenes/logout.png" height="40px" width="40px" value="login" class="botones" onclick="location.href='logout.php'"/> 
+						<a href='perfil.php'>Perfil</a>
+						<?php
+						
+					} else {
+					
+						?>
+						<input type="image" src="../imagenes/logout.png" height="40px" width="40px" value="login" class="botones" onclick="location.href='logout.php'"/>
+						<a href='perfil.php'>Perfil</a>
+						<?php
+					}
 			
-			}else if($baneado){
+			}else{
 				echo "<script>alert('Esta cuenta de usuario se encuentra deshabilitada')</script>";
 				unset($_SESSION);
-			}else{
-				echo "<script>alert('Combinación de usuario y contraseña incorrectos')</script>";
-				unset($_SESSION);
-			}
+				}
+		}else{
+			echo "<script>alert('Combinación de usuario y contraseña incorrectos')</script>";
+			unset($_SESSION);
+		}
 		
 		
 		
