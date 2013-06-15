@@ -17,19 +17,50 @@
 	$passwd=crypt($passwd,$corte);
 	
 	require_once("config.php");
-	//INSERCION USUARIO
-	/*$consulta="insert into usuario(nickname) value('".$nickname."')";
-		$datos=mysql_query($consulta,$conexion) or die ('Se ha producido un error.');*/
-		
-	//RECOGIDA ID USUARIO
-	$consulta="SELECT * from usuario where nickname=".$nickname;
-	while($fila = mysql_fetch_array($consulta))
+	$salir = false;
+	//Comprobacion de correo cogido
+	$resultado = mysql_query("SELECT * FROM datos_usuario");
+	while($fila = mysql_fetch_array($resultado))
 	{
-		$idUsuario=$fila["id"];
+		if($fila["correo"]==$mail)
+		{
+			$salir=true;
+		}
 	}
-	echo $idUsuario;
-	
-	//INSERT EN TABLA datos_usuario
-	$consulta="insert into usuario(idUsuario,password,nombre,correo,direccion,cod_postal,sexo,f_alta,f_nacimiento) value(".$idUsuario.",'".$passwd."','".$nombre."','".$mail."','".$dir."',".$cp.",'".$sexo."','".$f_alta."','".$f_nac."')";
-		$datos=mysql_query($consulta,$conexion) or die ('Se ha producido un error.');
+
+	if(!$salir)
+	{
+		//INSERCION USUARIO
+		$consulta="insert into usuario(nickname) value('".$nickname."')";
+			$datos=mysql_query($consulta,$conexion) or die ('Se ha producido un error1.');
+			
+		$consulta = "commit;";
+			$datos=mysql_query($consulta,$conexion) or die ('Se ha producido un error2.');
+		
+		//RECOGIDA ID USUARIO
+		$result = mysql_query("SELECT * FROM usuario where nickname='".$nickname."'");
+		while($fila = mysql_fetch_array($result))
+		{
+			$idUsuario=$fila["id"];
+		}
+		
+		//INSERT EN TABLA datos_usuario
+		$consulta="insert into datos_usuario(idUsuario,password,nombre,correo,direccion,cod_postal,sexo,f_alta,f_nacimiento) values(".$idUsuario.",'".$passwd."','".$nombre."','".$mail."','".$dir."',".$cp.",'".$sexo."','".$f_alta."','".$f_nac."');";
+			$datos=mysql_query($consulta,$conexion) or die ('Se ha producido un error3.');
+		
+				session_start();  
+				$_SESSION['usuario']=$nickname;
+				$_SESSION['idUsuario']=$idUsuario;
+				$_SESSION['rol']="Miembro";
+				$_SESSION['tiempo']=time();
+		
+		$url="http://".$_SERVER['HTTP_HOST']."/proyecto/index.php";
+		echo $url;
+		header("Location: ".$url);
+	}else
+	{
+		$url="http://".$_SERVER['HTTP_HOST']."/proyecto/index.php";
+		echo "Se ha producido un error. La dirección de correo ya se encuentra en nuestra base de datos.";
+		echo "<h1><a href='".$url."'>Volver</a></h1>";
+	}
 ?>
