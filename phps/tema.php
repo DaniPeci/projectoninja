@@ -95,14 +95,14 @@
 									if($cerrado==0)
 									{
 										?><img src="../imagenes/responder.png" alt="Nueva respuesta2" id="despliegaRellenable" /><?php
-										if($_SESSION['rol']=="administrador")
+										if($_SESSION['rol']=="Administrador")
 										{
 											?><br /><br /><a href="./cerrarHilo.php?tema=<?php echo $tema ?>"><img src="../imagenes/logout.png" width="50" alt="Cerrar el hilo" id="cerrarhilo" /></a><?php										
 										}
 									}else
 									{
 										?><img src="../imagenes/cerrado.png" alt="Hilo cerrado" onclick="alert('El hilo está cerrado');"/></input><?php
-																				if($_SESSION['rol']=="administrador")
+																				if($_SESSION['rol']=="Administrador")
 										{
 											?><br /><br /><a href="./abrirHilo.php?tema=<?php echo $tema ?>"><img src="../imagenes/login.png" width="50" alt="Cerrar el hilo" id="cerrarhilo" /></a><?php										
 										}
