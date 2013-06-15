@@ -9,7 +9,12 @@
 <?php
 
 	require_once("config.php");
-	
+		$baneado=false;
+		$datos=obtenerDatosUsuario();
+		$fila=mysql_fetch_array($datos);
+		if($fila[3]=="Bloqueado"){
+			$baneado=true;
+		}
 		if(!isset($_REQUEST['logout'])){
 			$_REQUEST['logout']=false;
 		}
@@ -34,10 +39,8 @@
 		$usuarioCorrecto=validarDatos($datos);
 		
 		
-		
-		if($usuarioCorrecto){
-			$datos=obtenerDatosUsuario();
-			$fila=mysql_fetch_array($datos);
+			
+		if($usuarioCorrecto && !$baneado){
 			$_SESSION['usuario']=$fila[2];
 			$_SESSION['idUsuario']=$fila[0];
 			$_SESSION['rol']=$fila[3];
@@ -63,8 +66,11 @@
 			}
 			
 			
+			}else if($baneado){
+				echo "<script>alert('Esta cuenta de usuario se encuentra deshabilitada')</script>";
+				unset($_SESSION);
 			}else{
-				echo "Combinación de usuario y contraseña incorrectos";
+				echo "<script>alert('Combinación de usuario y contraseña incorrectos')</script>";
 				unset($_SESSION);
 			}
 		
