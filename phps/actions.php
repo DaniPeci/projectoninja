@@ -62,6 +62,14 @@
 							$usuario = $_REQUEST['usuarios'];
 							$consulta2=mysql_query("UPDATE usuario set rol='Bloqueado' where nickname='".$usuario."'");
 								$datos=mysql_query($consulta2,$conexion);
+								echo "<table class='tablaForo' style='text-align: center;'><tr><td colspan='2'>El usuario ".$usuario." ha sido desactivado.</td></tr></table>";
+						}else if(isset($_REQUEST['activar']))
+						{
+							//ACCIONES DE ACTIVACION DE USUARIOS
+							$usuario = $_REQUEST['usuarios'];
+							$consulta2=mysql_query("UPDATE usuario set rol='Miembro' where nickname='".$usuario."'");
+							$datos=mysql_query($consulta2,$conexion);
+							echo "<table class='tablaForo' style='text-align: center;'><tr><td colspan='2'>El usuario ".$usuario." ha sido activado.</td></tr></table>";
 						}
 					}else
 					{

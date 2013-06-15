@@ -73,7 +73,7 @@
 						echo "<div>";
 						echo "<form action='actions.php' method='post'>";
 						echo "<h3>Borrado de usuarios</h3>";
-						$consulta2=mysql_query("SELECT nickname from usuario");
+						$consulta2=mysql_query("SELECT nickname from usuario where rol!='Bloqueado'");
 						echo "<label>Selecciona usuario: <select id='usuarios' name='usuarios'>";
 						while($fila=mysql_fetch_array($consulta2))
 						{
@@ -85,7 +85,25 @@
 						}
 						echo "</select></label><br /><br />";
 						echo "<input type='hidden' name='eliminar' value='eliminar' />";
-						echo "<input type='submit' value='Eliminar Usuario' />";
+						echo "<input type='submit' value='Bloquear usuario' />";
+						echo "</form>";
+						echo "</div>";
+												echo "<div>";
+						echo "<form action='actions.php' method='post'>";
+						echo "<h3>Borrado de usuarios</h3>";
+						$consulta2=mysql_query("SELECT nickname from usuario where rol='Bloqueado'");
+						echo "<label>Selecciona usuario: <select id='usuarios' name='usuarios'>";
+						while($fila=mysql_fetch_array($consulta2))
+						{
+							$usu = $fila['nickname'];
+							if($usu!=$_SESSION['usuario'])
+							{
+								echo "<option value='".$usu."'>".$usu."</option>";
+							}
+						}
+						echo "</select></label><br /><br />";
+						echo "<input type='hidden' name='activar' value='activar' />";
+						echo "<input type='submit' value='Activar usuario' />";
 						echo "</form>";
 						echo "</div>";
 					}
