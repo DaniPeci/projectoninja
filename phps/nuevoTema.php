@@ -57,7 +57,7 @@
 		
 	$url_tema= "./tema.php?tema=".$last;
 	$url_volver="./categoria.php?id=".$categoria;
-	echo "<table style='text-align: center;'><tr><th colspan='2'>Felicidades, acaba de registrar un nuevo tema<th></tr>";
+	echo "<table class='tablaForo' style='text-align: center;'><tr><th colspan='2'>Felicidades, acaba de registrar un nuevo tema<th></tr>";
 	echo '<tr><td><u><a href='.$url_tema.'>IR AL TEMA</a></u></td><td><u><a href='.$url_volver.'>VOLVER ATRAS</a></u></td></tr></table>';
 ?>
 				
