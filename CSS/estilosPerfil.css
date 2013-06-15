@@ -1,13 +1,41 @@
-
-#texto
-{
-	float: left;
+#caja{
+	width: 500px !important;
+	margin-top: 100px;
+	float: none;
+	margin-left: 100px;
+	border: 2px solid purple;
+	overflow: auto;
 	color: white;
-
+	text-align: center;
+	margin: auto;
+	line-height: 1.3;
+	font-size: 17px;
+	font-variant: small-caps;
+	background-image: -webkit-gradient(
+	linear,
+	200 bottom,
+	left top,
+	color-stop(0.05, rgb(14,2,20)),
+	color-stop(0.52, rgb(153,33,166)),
+	color-stop(0.81, rgb(237,164,233))
+);}
+#eliminarImagen{
+	cursor: pointer;
+	margin-left: 3px;
+	}
+input{
+	color: purple;
+	margin: auto;
+	font-size: 15px;
+	font-variant: small-caps;
 }
-
-#input
-{
-	float: right;
-	color: white;
-}
+h3{
+	font-family: "Starcraft";
+	src: url('../CSS/Starcraft.ttf') format("truetype");	
+	}
+#titulo{
+	position: relative;
+	top: 57px;
+	left: -66px;
+	color: purple;
+	}

@@ -1,6 +1,8 @@
 jQuery(function($){
    
-      
+      $( "#eliminarImagen" ).click(function(){
+      confirm('¿Estás seguro de querer eliminar tu imagen de perfil?');
+    	});
       
     $( "#menu-web" ).click(function(){
       window.location = 'portada.php';

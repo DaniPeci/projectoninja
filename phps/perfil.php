@@ -55,8 +55,8 @@
 
 					$array = array("Nickname: ", "Nombre: ", "Email: ", "Direccion: ","Código Postal: ","Sexo: ","Fecha de registro: ","Fecha de nacimiento: ","Rol: ");
 
-
-					echo "<div style='width: 500px !important; margin-top: 100px; float: none; margin-left: 100px;border: 2px solid purple; background-color: overflow: auto;'>";
+					echo "<h3 id='titulo'>Perfil de Usuario</h3>"
+					echo "<div id='caja'>";
 					while($fila=mysql_fetch_array($resultado)){
 						for($i=0;$i<9;$i++){
 							echo $array[$i]." ".$fila[$i]."<br />";
