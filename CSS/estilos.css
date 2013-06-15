@@ -11,6 +11,7 @@
 		
 	}
 #contenedor{
+		max-width:1095px;
 		min-width:800px;
 		width: 65%;
 		height: 97%;

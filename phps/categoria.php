@@ -44,7 +44,7 @@
 					<a href="#despliegaRellenable"  ><img src="../imagenes/nuevoTema.png" alt="nuevo tema" id="anclaDespliegue" /></a>
 					<?php
 					//AQUI EMPIEZA LA INCLUSION DE LOS TEMAS DEL FORO
-					echo "<table border='10px' class='hilos'><tr><th>Tema</th><th>Ultima respuesta</th></tr>";
+					echo "<table class='tablaForo' border='10px' class='hilos'><tr><th>Tema</th><th>Ultima respuesta</th></tr>";
 					$consulta=mysql_query("SELECT t.nombre,t.usuario,idTema from tema t where t.idCategoria=".$categoria);
 					//PAGINACION DE LOS TEMAS DE LA CATEGORIA EN CUESTION
 					include_once('paginacionCategorias.php');
@@ -59,7 +59,7 @@
 					<div class="contenedor_respuesta">
 						<img src="../imagenes/nuevoTema.png" alt="nuevo tema" id="despliegaRellenable" />
 						<div class="contenido_respuesta"><br/>
-							<table class="tabla_nueva">
+							<table class='tablaForo' class="tabla_nueva">
 							<?php 
 									$direccion= "?nombre=".$_SESSION['usuario']."&categoria=".$categoria."";
 								?>

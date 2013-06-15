@@ -1,27 +1,28 @@
-table{
+.tablaForo{
 		border: groove #2D0571;
 		position: relative;
 		margin: auto;
 		width: 500px;
 		background-color: #062170;
 		border-radius: 10px;
+		
 		}
-td{
+.tablaForo td{
 	padding: 10px;
-	color: black;
+	color: white;
 	font-size: smaller;
 	font-family: sans-serif;
 	
 	}
-th{
+.tablaForo th{
 	color: #39E639;
 	font-variant: small-caps;
 	font-weight: bold;
 	font-size: 20px;
 	}
-tr:nth-child(even) {background: #133AAC; }
-tr:nth-child(odd) {background: #476BD6; }
-tr:first-child {background-color: #200772;}
+ .tablaForo tr:nth-child(even) {background: #133AAC; }
+.tablaForo tr:nth-child(odd) {background: #476BD6; }
+.tablaForo tr:first-child {background-color: #200772;}
 
 a{
 	color: greenyellow;

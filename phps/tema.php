@@ -57,7 +57,7 @@
 						$consulta2=mysql_query("SELECT nombre,usuario,texto,f_creacion from tema where idTema=".$tema);
 						
 						
-						echo "<table border='1' class='respuestas'><tr><th>Usuario</th><th>".$nombre_tema."</th></tr>";
+						echo "<table class='tablaForo' border='1' class='respuestas'><tr><th>Usuario</th><th>".$nombre_tema."</th></tr>";
 						
 						if(isset($_GET['page']))
 						{
@@ -110,7 +110,7 @@
 								?>
 								
 						<div class="contenido_respuesta"><br />
-							<table class="tabla_nueva">
+							<table class='tablaForo'>
 							<form method="post" action="nuevaRespuesta.php">
 							<input type="hidden" value="<?php echo $_SESSION['idUsuario']?>" name="idUsuario" />
 							<input type="hidden" value="<?php echo $_REQUEST['tema'] ?>" name="idTema" />
