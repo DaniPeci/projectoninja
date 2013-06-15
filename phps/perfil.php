@@ -17,7 +17,7 @@
 		<title>Foro Starcraft II</title>
 		<link href="../imagenes/starcraft-logo.png" rel="shortcut icon" />
 		<link rel="stylesheet" type="text/css" href="../CSS/estilos.css" />
-		<link rel="stylesheet" type="text/css" href="../CSS/estilosCategoria.css" />
+		<link rel="stylesheet" type="text/css" href="../CSS/estilosPerfil.css" />
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 		<script src="../JS/jquery.js"></script>
@@ -55,7 +55,7 @@
 
 					$array = array("Nickname: ", "Nombre: ", "Email: ", "Direccion: ","Código Postal: ","Sexo: ","Fecha de registro: ","Fecha de nacimiento: ","Rol: ");
 
-					echo "<h3 id='titulo'>Perfil de Usuario</h3>"
+					echo "<h3 id='titulo'>Perfil de Usuario</h3>";
 					echo "<div id='caja'>";
 					while($fila=mysql_fetch_array($resultado)){
 						for($i=0;$i<9;$i++){
