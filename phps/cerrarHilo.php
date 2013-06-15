@@ -44,7 +44,7 @@
 		$datos=mysql_query($consulta,$conexion) or die ('Se ha producido un error.');
 		
 	$url="./tema.php?tema=".$tema;	
-	echo "<table style='text-align: center;'><tr><th>Acaba de cerrar el Tema<th></tr>";
+	echo "<table class='tablaForo' style='text-align: center;'><tr><th>Acaba de cerrar el Tema<th></tr>";
 	echo '<tr><td><u><a href='.$url.'>IR AL TEMA</a></u></td></tr></table>';
 ?>
 
