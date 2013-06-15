@@ -97,14 +97,22 @@
 										?><img src="../imagenes/responder.png" alt="Nueva respuesta2" id="despliegaRellenable" /><?php
 										if(($_SESSION['rol']=="Administrador"||$_SESSION['rol']=="Moderador"))
 										{
-											?><br /><br /><a href="./cerrarHilo.php?tema=<?php echo $tema ?>"><img src="../imagenes/logout.png" width="50" alt="Cerrar el hilo" id="cerrarhilo" /></a><?php										
+											?><br /><br /><a href="./cerrarHilo.php?tema=<?php echo $tema ?>"><img src="../imagenes/logout.png" width="50" alt="Cerrar el hilo" id="cerrarhilo" /></a><h3 id='titulo'>Cerrar hilo</h3><?php										
+										}
+										if($_SESSION['rol']=="Administrador")
+										{
+											?><a href="./eliminarHilo.php?tema=<?php echo $tema ?>"><img src="../imagenes/logout.png" width="50" alt="Cerrar el hilo" id="cerrarhilo" /></a><h3 id='titulo'>Eliminar tema</h3><?php
 										}
 									}else
 									{
 										?><img src="../imagenes/cerrado.png" alt="Hilo cerrado" onclick="alert('El hilo está cerrado');"/></input><?php
-																				if(($_SESSION['rol']=="Administrador"||$_SESSION['rol']=="Moderador"))
+										if(($_SESSION['rol']=="Administrador"||$_SESSION['rol']=="Moderador"))
 										{
-											?><br /><br /><a href="./abrirHilo.php?tema=<?php echo $tema ?>"><img src="../imagenes/login.png" width="50" alt="Cerrar el hilo" id="cerrarhilo" /></a><?php										
+											?><br /><br /><a href="./abrirHilo.php?tema=<?php echo $tema ?>"><img src="../imagenes/login.png" width="50" alt="Cerrar el hilo" id="cerrarhilo" /></a><h3 id='titulo'>Abrir hilo</h3><?php										
+										}
+										if($_SESSION['rol']=="Administrador")
+										{
+											?><a href="./eliminarHilo.php?tema=<?php echo $tema ?>"><img src="../imagenes/logout.png" width="50" alt="Cerrar el hilo" id="cerrarhilo" /></a><h3 id='titulo'>Eliminar tema</h3><?php
 										}
 									}
 								?>
