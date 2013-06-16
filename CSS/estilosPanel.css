@@ -1,0 +1,47 @@
+h3{
+color: greenyellow;
+}
+label{
+color: white;
+font-variant: small-caps;
+		
+		}
+#foros{
+text-align: center;	
+	}
+#admin,#borrado{
+	width: 300px;
+	margin: auto;
+	border-radius: 53px 43px 58px 58px;
+	}
+#admin{
+border: 5px double purple;	
+margin-top: 100px;
+background: linear-gradient(180deg, rgba(173, 0, 255, 0.22),rgba(0, 255, 41, 0.69)100% ,0.1);
+	}
+#borrado{
+border: 5px double purple;
+background: linear-gradient(0deg, rgba(173, 0, 255, 0.22),rgba(0, 255, 41, 0.69)100% ,0.1);
+position: relative;
+top: -10px;	
+	}
+#bloqueo{
+border-left: 5px double purple;
+border-right: 5px double purple;
+margin: auto;
+width: 200px;
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgba(0, 255, 41, 0.79)),
+	color-stop(0.53, rgba(173, 0, 255, 0.22)),
+	color-stop(0.93, rgba(0, 255, 41, 0.79))
+);
+padding-top: 10px;
+padding-bottom: 10px;
+position: relative;
+top: -5px;
+z-index: 10;
+	}
+

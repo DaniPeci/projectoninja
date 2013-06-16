@@ -17,7 +17,7 @@
 		<title>Foro Starcraft II</title>
 		<link href="../imagenes/starcraft-logo.png" rel="shortcut icon" />
 		<link rel="stylesheet" type="text/css" href="../CSS/estilos.css" />
-		<link rel="stylesheet" type="text/css" href="../CSS/estilosCategoria.css" />
+		<link rel="stylesheet" type="text/css" href="../CSS/estilosPanel.css" />
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 		<script src="../JS/jquery.js"></script>
@@ -51,7 +51,7 @@
 					{
 						
 						//CREACION DE DDL DINAMICO
-						echo "<div>";
+						echo "<div <div id='admin'>";
 						echo "<form action='actions.php' method='post'>";
 						echo "<h3>Administracion de usuarios</h3>";
 						$consulta2=mysql_query("SELECT nickname from usuario");
@@ -70,7 +70,7 @@
 						echo "<br /><input type='submit' value='Establecer Rol' />";
 						echo "</form>";
 						echo "</div>";
-						echo "<div>";
+						echo "<div id='bloqueo'>";
 						echo "<form action='actions.php' method='post'>";
 						echo "<h3>Borrado de usuarios</h3>";
 						$consulta2=mysql_query("SELECT nickname from usuario where rol!='Bloqueado'");
@@ -88,7 +88,7 @@
 						echo "<input type='submit' value='Bloquear usuario' />";
 						echo "</form>";
 						echo "</div>";
-												echo "<div>";
+												echo "<div id='borrado'>";
 						echo "<form action='actions.php' method='post'>";
 						echo "<h3>Borrado de usuarios</h3>";
 						$consulta2=mysql_query("SELECT nickname from usuario where rol='Bloqueado'");

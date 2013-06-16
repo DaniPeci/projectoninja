@@ -80,7 +80,7 @@
 			
 					if($_SESSION['rol']=="Administrador")
 						{
-							echo '<br /><br /><a href="./controlPanel.php"><h3 id="titulo" style="color: gold;">Panel de control</h3></a>';									
+							echo '<br /><br /><a href="./controlPanel.php"><h3 id="titulo" style="color: greenyellow;">Panel de control</h3></a>';									
 						}
 				?>
 				
