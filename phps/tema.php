@@ -49,10 +49,11 @@
 						$fecha=$fila[3];
 						$cerrado=$fila[4];
 						$nombre_creador;
-						$consulta2=mysql_query("SELECT nickname from usuario where id=".$id_creador);
+						$consulta2=mysql_query("SELECT U.nickname, E.imagenPerfil from usuario U, datos_usuario E where U.id=".$id_creador." AND E.idUsuario=".$id_creador.";") or die(mysql_error());
 						while($fila2=mysql_fetch_array($consulta2))
 						{
 							$nombre_creador=$fila2[0];
+							$imagen_creador="../imgPerfil/".$fila2[1];
 						}
 						$consulta2=mysql_query("SELECT nombre,usuario,texto,f_creacion from tema where idTema=".$tema);
 						
@@ -75,12 +76,11 @@
 						{
 							$page=1;
 							$rows_per_page= 9;
-							echo "<tr><td>".$nombre_creador."</td><td>".$texto."<br /><br />Creado el: ".$fecha."</td></tr>";
+							echo "<tr><td><img src='".$imagen_creador."' width='60px' />   ".$nombre_creador."</td><td>".$texto."<br /><br />Creado el: ".$fecha."</td></tr>";
 						}
 						
 					}
 					//Creando todas las respuestas al hilo
-					$consulta=mysql_query("SELECT idUsuario,texto,f_creacion from respuesta where idTema=".$tema);
 					
 					include_once('paginacionRespuestas.php');
 					?></table><br/>		

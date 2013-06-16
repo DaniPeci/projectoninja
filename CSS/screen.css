@@ -15,7 +15,7 @@
 		
 	#content{
 		position:relative;
-		float: left;
+		margin: auto;
 
 		}	
 	/*Estilos caja texto y fondo texto Slider*/
@@ -62,13 +62,15 @@
 		display:block;
 		width:67px;
 		height:48px;
-		position:absolute;
-		left:10px;
-		top: 40%;
+		position:relative;
+		left: -248px;
+		top: -148px;
+		z-index: 1000;
 		z-index:1000;
 		}	
 	#nextBtn, #slider1next{ 
-		left:530px;
+		left: 245px;
+		top: -194px;
 		}														
 	#prevBtn a, #nextBtn a,
 	#slider1next a, #slider1prev a{  

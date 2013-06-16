@@ -39,13 +39,15 @@ else
       ?> 
     <?php while($row = mysql_fetch_assoc($respuestas))
           {  
-        $consulta2=mysql_query("SELECT nickname from usuario where id=".$row['idUsuario']);
+        $consulta2=mysql_query("SELECT U.nickname, E.imagenPerfil from usuario U, datos_usuario E where U.id=".$row['idUsuario']." AND E.idUsuario=".$row['idUsuario'].";");
 		while($fila2=mysql_fetch_array($consulta2))
 		{
 			$nombre_creador=$fila2[0];
+			$imagen_creador="../imgPerfil/".$fila2[1];
+			
 		}
 	?>
-            <tr><td><?php echo $nombre_creador; ?> </td><td> <?php echo $row['texto']."<br>";  echo $row['f_creacion']; ?> </td></tr>
+            <tr><td><?php echo "<img src='".$imagen_creador."' width='60px' />   ".$nombre_creador ?> </td><td> <?php echo $row['texto']."<br>";  echo $row['f_creacion']; ?> </td></tr>
    <?php  } ?>
         </table><br />
 <?php
