@@ -55,6 +55,7 @@
 					$_SESSION['idUsuario']=$fila[0];
 					$_SESSION['rol']=$fila[3];
 					$_SESSION['tiempo']=time();
+					$_SESSION['foto']=$fila[4];
 					$url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 					echo "Estás logueado como <strong>".$_SESSION['usuario']."</strong><br />";
 					echo "Tipo de usuario: <strong>".$_SESSION['rol']."</strong><br />";
@@ -146,7 +147,7 @@
 		$corte=substr($nombre,0,2);
 		$passwd=crypt($_POST['passwd'],$corte);
 		
-		$query=mysql_query("SELECT usuario.id, datos_usuario.idUsuario, usuario.nickname, usuario.rol from usuario, datos_usuario WHERE usuario.nickname='".$nombre."'AND datos_usuario.password='".$passwd."';") or
+		$query=mysql_query("SELECT usuario.id, datos_usuario.idUsuario, usuario.nickname, usuario.rol, datos_usuario.imagenPerfil from usuario, datos_usuario  WHERE usuario.nickname='".$nombre."'AND datos_usuario.password='".$passwd."';") or
 		die("No se puede realizar la consulta ".mysql_error());
 		
 		return $query;
