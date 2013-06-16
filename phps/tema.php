@@ -56,8 +56,38 @@
 							$imagen_creador="../imgPerfil/".$fila2[1];
 						}
 						$consulta2=mysql_query("SELECT nombre,usuario,texto,f_creacion from tema where idTema=".$tema);
-						
-						
+						?>
+						<div class="contenedor_respuesta">
+								<!-- Comprobacion de hilo cerrado -->
+								<?php
+									if($cerrado==0)
+									{
+										
+										if(($_SESSION['rol']=="Administrador"||$_SESSION['rol']=="Moderador"))
+										{
+											?><a href="./cerrarHilo.php?tema=<?php echo $tema ?>" id="cerrarhilo"><img src="../imagenes/lock2.png" width="30" alt="Cerrar el hilo"  /><p id='titulo'>Cerrar hilo</p></a><?php										
+										}
+										if($_SESSION['rol']=="Administrador")
+										{
+											?><a href="./eliminarHilo.php?tema=<?php echo $tema ?>" id="eliminarhilo"><img src="../imagenes/eliminar.png" width="30" alt="Eliminar el hilo"  /><p id='titulo'>Eliminar tema</p></a><?php
+										}
+										?><img src="../imagenes/responder.png" alt="Nueva respuesta2" id="despliegaRellenable" /><br/><?php
+									}else
+									{
+										
+										if(($_SESSION['rol']=="Administrador"||$_SESSION['rol']=="Moderador"))
+										{
+											?><a href="./abrirHilo.php?tema=<?php echo $tema ?>" id="cerrarhilo"><img src="../imagenes/unlock.png" width="30" alt="Abrir el hilo"  /><p id='titulo'>Abrir hilo</p></a><?php										
+										}
+										if($_SESSION['rol']=="Administrador")
+										{
+											?><a href="./eliminarHilo.php?tema=<?php echo $tema ?>" id="eliminarhilo"><img src="../imagenes/eliminar.png" width="30" alt="Eliminar el hilo"  /><p id='titulo'>Eliminar tema</p></a><?php
+										}
+										?><img src="../imagenes/cerrado.png" alt="Hilo cerrado" onclick="alert('El hilo está cerrado');"/><br/><?php
+									}
+								?>
+							</div>	
+						<?php
 						echo "<table class='tablaForo' border='1' class='respuestas'><tr><th>Usuario</th><th>".$nombre_tema."</th></tr>";
 						
 						if(isset($_GET['page']))
@@ -89,34 +119,7 @@
 											
 					?>
 					
-					<div class="contenedor_respuesta">
-								<!-- Comprobacion de hilo cerrado -->
-								<?php
-									if($cerrado==0)
-									{
-										?><img src="../imagenes/responder.png" alt="Nueva respuesta2" id="despliegaRellenable" /><?php
-										if(($_SESSION['rol']=="Administrador"||$_SESSION['rol']=="Moderador"))
-										{
-											?><br /><br /><a href="./cerrarHilo.php?tema=<?php echo $tema ?>"><img src="../imagenes/logout.png" width="50" alt="Cerrar el hilo" id="cerrarhilo" /></a><h3 id='titulo'>Cerrar hilo</h3><?php										
-										}
-										if($_SESSION['rol']=="Administrador")
-										{
-											?><a href="./eliminarHilo.php?tema=<?php echo $tema ?>"><img src="../imagenes/logout.png" width="50" alt="Cerrar el hilo" id="cerrarhilo" /></a><h3 id='titulo'>Eliminar tema</h3><?php
-										}
-									}else
-									{
-										?><img src="../imagenes/cerrado.png" alt="Hilo cerrado" onclick="alert('El hilo está cerrado');"/></input><?php
-										if(($_SESSION['rol']=="Administrador"||$_SESSION['rol']=="Moderador"))
-										{
-											?><br /><br /><a href="./abrirHilo.php?tema=<?php echo $tema ?>"><img src="../imagenes/login.png" width="50" alt="Cerrar el hilo" id="cerrarhilo" /></a><h3 id='titulo'>Abrir hilo</h3><?php										
-										}
-										if($_SESSION['rol']=="Administrador")
-										{
-											?><a href="./eliminarHilo.php?tema=<?php echo $tema ?>"><img src="../imagenes/logout.png" width="50" alt="Cerrar el hilo" id="cerrarhilo" /></a><h3 id='titulo'>Eliminar tema</h3><?php
-										}
-									}
-								?>
-								
+					
 						<div class="contenido_respuesta"><br />
 							<table class='tablaForo'>
 							<form method="post" action="nuevaRespuesta.php">
@@ -128,7 +131,7 @@
 								</td></tr>
 							</form>
 							</table>
-						</div>
+
 					</div>
 						<?php					
 						}

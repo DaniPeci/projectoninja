@@ -63,3 +63,15 @@ h1{
 #despliegaRellenable:hover{
 	cursor: pointer;
 	}
+#eliminarhilo, #cerrarhilo {
+position: relative;
+float: left;
+top: -13px;
+left: 252px;
+line-height: 1.9;
+}
+#cerrarhilo {
+	line-height: 0;
+	margin-right: 23px;
+}
+	}
