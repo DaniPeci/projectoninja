@@ -1,4 +1,4 @@
-#cabecera{
+	#cabecera{
 		position: relative;
 		min-width: 850px;
 		width: 98%;
@@ -10,9 +10,9 @@
 		z-index: 1;
 		
 	}
-#contenedor{
+	#contenedor{
 		max-width: 1047px;
-		min-width:800px;
+		min-width: 860px;
 		width: 65%;
 		height: 97%;
 		padding-bottom: 25px;
@@ -67,7 +67,7 @@
 		}
 	#foros{
 		min-width:600px;
-		width: 75%;
+		width: 70%;
 		float: left;
 		min-height: 750px;
 		background-image: url('../imagenes/fondo.jpg');
@@ -132,7 +132,7 @@
 	}
 
 	#login{
-			width: 228px;
+			width: 280px;
 			background-image: url('../imagenes/fondo.jpg');
 			height: 120px;
 			overflow: hidden;
@@ -150,25 +150,26 @@
 			height: 95%;	
 			float: right;
 			min-width:200px;
-			width:25%;	
+			width:30%;	
 		}
 	#espacio {
 			border: 2px solid white;
 			float: right;
 			height: 642px;
-			width: 237px;
-			margin-left: 5px;
+			width: 241px;
+			margin-left: 28px;
+			margin-top: 8px;
 			border-radius: 30px 30px 30px 30px;
 			position: absolute;
-			background-color:rgba(173, 0, 255, 0.22);
+			background-color: rgba(173, 0, 255, 0.22);
 		}
-		#espacio h3{
+	#espacio h3{
 				text-align: center;
 				color: rgba(255, 255, 255, 0.9);
 			}
-textarea {
+	textarea {
 	resize: none;
-}			
+		}			
 			
 @font-face {
 font-family: "Starcraft";

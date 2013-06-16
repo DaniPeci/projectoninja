@@ -19,3 +19,7 @@ strong{
 color: #3300CC;
 font-size: larger;
 	}
+a:after, a:before,a{
+	color: greenyellow;
+	text-decoration: none;
+	}
