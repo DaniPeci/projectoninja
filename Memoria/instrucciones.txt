@@ -1,0 +1,20 @@
+1.1 Guía de estilo
+[Obviamente, este anexo deberá ser eliminado del documento final a entregar.]
+Título del proyecto
+Elegir un nombre llamativo y relacionado con la temática que se va a tratar.
+Figuras y tablas
+Cualquier figura, tabla, ... incluida en el documento deberá tener un título a pie de página.
+Incluir tablas, gráficos, mapas conceptuales, ... que ayuden a leer y comprender el documento.
+Índices
+Ya incluido en la plantilla. Se puede añadir a continuación un índice de figuras, si se desea.
+Redacción
+Se evitarán las mayúsculas, salvo en los títulos y poco más.
+No se emplearán formas personales (“instalamos”, “seleccionamos”, …). En su lugar se utilizarán formas impersonales (“instalar”, “se instalará”, “seleccionar”, “se selecciona”, ...).
+Se evitará la voz pasiva (casi siempre traducción literal del inglés). En vez de: “es desarrollado para cumplir ...”, mejor utilizar: “se desarrolla para cumplir ...”.
+Se evitarán los párrafos largos.
+Se utilizarán viñetas donde sea necesario para facilitar la lectura del documento.
+Formato
+El documento se generará en formato pdf.
+Entrega
+Todo el material del módulo Proyecto (documentos, ficheros fuentes, herramientas, ...) se entregará en formato electrónico, en una carpeta comprimida: 
+CICLO-CURSO-TITULO DEL PROYECTO
