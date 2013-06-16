@@ -39,7 +39,7 @@
 		$fecha=date('Y-m-d H:i:s');
 		$categoria=($_REQUEST['categoria']);
 		$nombre=($_REQUEST['titulo']);
-		$texto=($_REQUEST['contenido']);
+		$texto=nl2br($_REQUEST['contenido']);
 		$usuario=($_REQUEST['usuario']);
 		require_once("config.php");
 		

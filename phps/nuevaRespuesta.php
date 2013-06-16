@@ -37,7 +37,7 @@
 	{
 		//CREANDO LA FECHA EN PHP
 		$fecha=date('Y-m-d H:i:s');
-		$texto=htmlspecialchars($_REQUEST['contenido']);
+		$texto=nl2br($_REQUEST['contenido']);
 		$usuario=$_REQUEST['idUsuario'];
 		$tema=$_REQUEST['idTema'];
 		$textoHtml=htmlspecialchars($texto);
