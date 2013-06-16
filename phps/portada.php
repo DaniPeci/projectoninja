@@ -15,7 +15,7 @@
 				$("#ventanaRegistro").dialog({
 					autoOpen: false,
 					height: 400,
-					 width: 500,
+					 width: 550,
 					 modal: true
 				});
 				$("#botonRegistro").click(function(){
