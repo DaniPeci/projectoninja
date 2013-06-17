@@ -58,7 +58,6 @@
 					?>
 					
 					<div class="contenedor_respuesta">
-						<img src="../imagenes/nuevoTema.png" alt="nuevo tema" id="despliegaRellenable" />
 						<div class="contenido_respuesta"><br/>
 							<table class='tablaForo' class="tabla_nueva">
 							<?php 
