@@ -72,7 +72,7 @@
 						echo "</div>";
 						echo "<div id='bloqueo'>";
 						echo "<form action='actions.php' method='post'>";
-						echo "<h3>Borrado de usuarios</h3>";
+						echo "<h3>Bloquear usuarios</h3>";
 						$consulta2=mysql_query("SELECT nickname from usuario where rol!='Bloqueado'");
 						echo "<label>Selecciona usuario: <select id='usuarios' name='usuarios'>";
 						while($fila=mysql_fetch_array($consulta2))
@@ -90,7 +90,7 @@
 						echo "</div>";
 												echo "<div id='borrado'>";
 						echo "<form action='actions.php' method='post'>";
-						echo "<h3>Borrado de usuarios</h3>";
+						echo "<h3>Desbloquear usuarios</h3>";
 						$consulta2=mysql_query("SELECT nickname from usuario where rol='Bloqueado'");
 						echo "<label>Selecciona usuario: <select id='usuarios' name='usuarios'>";
 						while($fila=mysql_fetch_array($consulta2))
