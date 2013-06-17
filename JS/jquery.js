@@ -1,13 +1,18 @@
 jQuery(function($){
    
-      $( "#eliminarImagen" ).click(function(){
+      $("#eliminarImagen").click(function(){
       confirm('¿Estás seguro de querer eliminar tu imagen de perfil?');
     	});
-      
+    	
+      $("#eliminarhilo").click(function(){
+      confirm('¿Estás seguro de querer eliminar el hilo?');
+    	});
+    	
     $( "#menu-web" ).click(function(){
       window.location = 'portada.php';
     	});
-   $( "#menu-foro" ).click(function(){
+    	
+    $( "#menu-foro" ).click(function(){
       window.location = 'foro.php';
     	});
     	
