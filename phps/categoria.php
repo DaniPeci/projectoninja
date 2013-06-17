@@ -42,10 +42,10 @@
 						echo "<h1 align='center' style='color: white;'>".$fila[0]."</h1>"; //Editar el estilo
 					}
 					?>
-					<a href="#despliegaRellenable"  ><img src="../imagenes/nuevoTema.png" alt="nuevo tema" id="anclaDespliegue" /></a>
+					<a href="#despliegaRellenable"  style='position: relative; left: 470px;'><img src="../imagenes/nuevoTema.png" alt="nuevo tema" id="despliegaRellenable" /></a>
 					<?php
 					//AQUI EMPIEZA LA INCLUSION DE LOS TEMAS DEL FORO
-					echo "<table class='tablaForo' border='10px' class='hilos'><tr><th>Tema</th><th>Ultima respuesta</th></tr>";
+					echo "<table class='tablaForo' border='10px' class='hilos' style='margin-top: 30px;'><tr><th>Tema</th><th>Ultima respuesta</th></tr>";
 					$consulta=mysql_query("SELECT t.nombre,t.usuario,idTema from tema t where t.idCategoria=".$categoria);
 					//PAGINACION DE LOS TEMAS DE LA CATEGORIA EN CUESTION
 					include_once('paginacionCategorias.php');
