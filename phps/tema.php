@@ -106,7 +106,7 @@
 						{
 							$page=1;
 							$rows_per_page= 9;
-							echo "<tr><td><img src='".$imagen_creador."' width='60px' />   ".$nombre_creador."</td><td>".$texto."<br /><br />Creado el: ".$fecha."</td></tr>";
+							echo "<tr><td><img src='".$imagen_creador."' width='60px' /><br />   ".$nombre_creador."</td><td>".$texto."<br /><br />Creado el: ".$fecha."</td></tr>";
 						}
 						
 					}

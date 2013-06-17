@@ -47,7 +47,7 @@ else
 			
 		}
 	?>
-            <tr><td><?php echo "<img src='".$imagen_creador."' width='60px' />   ".$nombre_creador ?> </td><td> <?php echo $row['texto']."<br>";  echo $row['f_creacion']; ?> </td></tr>
+            <tr><td><?php echo "<img src='".$imagen_creador."' width='60px' /><br />   ".$nombre_creador ?> </td><td> <?php echo $row['texto']."<br>";  echo $row['f_creacion']; ?> </td></tr>
    <?php  } ?>
         </table><br />
 <?php
