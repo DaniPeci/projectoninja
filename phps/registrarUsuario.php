@@ -54,12 +54,12 @@
 				$_SESSION['rol']="Miembro";
 				$_SESSION['tiempo']=time();
 		
-		$url="http://".$_SERVER['HTTP_HOST']."/proyecto/index.php";
+		$url="http://".$_SERVER['HTTP_HOST']."/projectoninja/index.php";
 		echo $url;
 		header("Location: ".$url);
 	}else
 	{
-		$url="http://".$_SERVER['HTTP_HOST']."/proyecto/index.php";
+		$url="http://".$_SERVER['HTTP_HOST']."/projectoninja/index.php";
 		echo "Se ha producido un error. La dirección de correo ya se encuentra en nuestra base de datos.";
 		echo "<h1><a href='".$url."'>Volver</a></h1>";
 	}
